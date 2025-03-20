@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 /**
  * Componente para el layout de la aplicación
  * @export
