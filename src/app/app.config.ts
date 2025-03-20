@@ -1,10 +1,12 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { routes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
+import { APP_PROVIDERS } from './app.providers';
 
 /**
  * Configuración de la aplicación, Opciones de configuración para bootstrapApplication en main.ts. providers: Proveedores de servicios para la aplicación.
@@ -15,9 +17,10 @@ import Aura from '@primeng/themes/aura';
  */
 export const AppConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withComponentInputBinding()),
     provideHttpClient(withInterceptorsFromDi()),
     provideAnimations(),
+    provideAnimationsAsync(),
     providePrimeNG({
       ripple: true,
       theme: {
@@ -28,5 +31,6 @@ export const AppConfig: ApplicationConfig = {
         },
       },
     }),
+    ...APP_PROVIDERS,
   ],
 };

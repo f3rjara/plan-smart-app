@@ -14,8 +14,8 @@
       "@molecules/*": ["src/app/ui/components/molecules/*"],
       "@organisms/*": ["src/app/ui/components/organisms/*"],
       "@templates/*": ["src/app/ui/components/templates/*"],
-      "@interfaces/*": ["src/app/ui/interfaces/*"],
-      "@directives/*": ["src/app/ui/directives/*"]
+      "@interfaces/*": ["src/app/shared/interfaces/*"],
+      "@directives/*": ["src/app/shared/directives/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
