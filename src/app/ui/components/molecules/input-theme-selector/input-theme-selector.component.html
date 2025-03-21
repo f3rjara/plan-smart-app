@@ -1,0 +1,8 @@
+<p-button
+  [icon]="iconMode()"
+  variant="outlined"
+  severity="secondary"
+  [attr.aria-label]="isDarkMode() ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'"
+  [pTooltip]="isDarkMode() ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'"
+  showDelay="300"
+  (onClick)="changeTheme()" />
