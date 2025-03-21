@@ -8,7 +8,6 @@ import { ButtonModule } from 'primeng/button';
 describe('HomeLayoutComponent', () => {
   let component: HomeLayoutComponent;
   let fixture: ComponentFixture<HomeLayoutComponent>;
-  let themeUiService: ThemeUiService;
 
   const themeUiServiceMock = {
     themeMode: jest.fn(),
@@ -23,7 +22,6 @@ describe('HomeLayoutComponent', () => {
 
     fixture = TestBed.createComponent(HomeLayoutComponent);
     component = fixture.componentInstance;
-    themeUiService = TestBed.inject(ThemeUiService);
     fixture.detectChanges();
   });
 
