@@ -1,4 +1,5 @@
 @use 'vars' as _vars;
+@import './mixin/order-grid';
 
 html, body {
   margin: 0;
