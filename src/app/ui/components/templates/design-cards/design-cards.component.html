@@ -1,1 +1,19 @@
-<p>design-cards works!</p>
+<section class="section-design-cards-component h-full grid grid-nogutter">
+  <div class="container-design-cads" appDarkTheme>
+    <div class="image-grid">
+      @for (item of [].constructor(42); track $index; let idx = $index) {
+        <div class="container-card">
+          <div
+            class="card"
+            [id]="'card-' + idx"
+            [class]="'card-' + idx"
+            [ngClass]="{ 'center-card': isCenterCard(idx) }"></div>
+        </div>
+      }
+
+      @for (movingCard of movingCardPositions; track $index) {
+        <div class="moving-card"></div>
+      }
+    </div>
+  </div>
+</section>

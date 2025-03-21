@@ -1,0 +1,28 @@
+// Breakpoints de PrimeFlex
+$breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);
+
+// Rango de órdenes disponibles (ajústalo según necesites)
+$order-range: 0, 1, 2, 3, 4, 5;
+
+// Generar clases base
+@each $order in $order-range {
+    .order-grid-#{$order} {
+        order: $order;
+    }
+}
+
+// Generar clases responsivas
+@each $breakpoint, $size in $breakpoints {
+    @media (min-width: $size) {
+        @each $order in $order-range {
+            .#{$breakpoint}\:order-grid-#{$order} {
+                order: $order;
+            }
+        }
+    }
+}

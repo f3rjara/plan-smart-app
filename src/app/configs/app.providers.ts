@@ -1,7 +1,7 @@
 import { APP_INITIALIZER, EnvironmentProviders, LOCALE_ID, Provider } from '@angular/core';
-import { ThemeUiService } from '../core/services/theme/theme-ui.service';
-import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
+import { providePrimeNG } from 'primeng/config';
+import { ThemeUiService } from '@core/services/theme/theme-ui.service';
 
 const APP_SERVICES = [ThemeUiService];
 

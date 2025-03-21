@@ -1,3 +1,129 @@
+@use 'vars' as _vars;
+@import 'primeflex/primeflex.scss';
+
 :host {
   display: block;
+  height: 100%;
+  overflow: hidden;
+
+  .container-design-cads {
+    height: max-content;
+    max-height: 100dvh;
+    width: 100%;
+    @include styleclass('flex justify-content-center align-items-center');
+    position: relative;
+
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 80%),
+        url('/assets/images/fondo-cards.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+
+    @media (max-width: 992px) {
+      -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    filter: contrast(1.2);
+    mix-blend-mode: darken;
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      place-content: center;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+
+      filter: drop-shadow(2px 4px 6px black);
+
+      .container-card {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          top: 0px;
+          left: 0;
+          border: 7px solid;
+          @include styleclass('surface-border border-200')
+        }
+
+        .card {
+          height: 130px;
+          width: 130px;
+          position: relative;
+          border: 7px solid;
+
+          @include styleclass('surface-border border-200');
+          border-radius: 20px;
+
+          &.center-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0%;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: inherit;
+              transform: scaleY(-1);
+              opacity: 0.1;
+              filter: blur(80px);
+            }
+          }
+
+          @media (min-width: _vars.$tablet) {
+            height: 160px;
+            width: 160px;
+          }
+
+          @media (min-width: _vars.$extra-large) {
+            height: 200px;
+            width: 200px;
+          }
+        }
+      }
+
+      .moving-card {
+        position: absolute;
+        width: calc(130px - 12px);
+        height: calc(130px - 12px);
+        border-radius: 10px;
+        background: #cdc583;
+
+        &--animation {
+          transition:
+            transform 0.5s ease-in-out,
+            opacity 0.5s ease-in-out;
+        }
+
+        &:nth-child(odd) {
+          background-color: #8e5ce3;
+        }
+
+        @media (min-width: _vars.$tablet) {
+          width: calc(160px - 12px);
+          height: calc(160px - 12px);
+        }
+
+        @media (min-width: _vars.$extra-large) {
+          width: calc(200px - 12px);
+          height: calc(200px - 12px);
+        }
+      }
+    }
+  }
 }
