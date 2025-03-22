@@ -1,12 +1,19 @@
-<section class="section-sign-in-component h-full">
-  <div class="grid">
-    <div class="col flex justify-content-end p-4">
+<section class="section-sign-in-component grid nested-grid h-full">
+  <div class="col-12">
+    <div class="flex justify-content-end p-4">
       <app-input-theme-selector />
     </div>
   </div>
-  <div class="grid">
-    <div class="col">
-      <h2 class="text-center">Iniciar Sesion</h2>
+  <div class="col-12 flex flex-column justify-content-end p-4">
+    <h2 class="text-center mb-5">Iniciar Sesion</h2>
+    <div class="grid justify-content-center">
+      <div class="col-10 md:col-8 lg:col-4">
+        <div class="flex flex-column gap-2">
+          <label for="username">Nombre de Usuario</label>
+          <input pInputText id="username" aria-describedby="username-help" [(ngModel)]="value" />
+          <small id="username-help">Ingrese su nombre de usuario</small>
+        </div>
+      </div>
     </div>
   </div>
 </section>
