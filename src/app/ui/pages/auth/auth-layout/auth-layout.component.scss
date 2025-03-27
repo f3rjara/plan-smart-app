@@ -6,6 +6,6 @@
   overflow: hidden;
 
   @media screen and (max-width: _vars.$desktop) {
-    overflow: auto;
+    overflow-y: auto;
   }
 }
