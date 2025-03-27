@@ -1,0 +1,12 @@
+:host {
+  display: block;
+
+  .section-sign-in-component {
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .inputmask-comp ::ng-deep input {
+    width: 100%;
+  }
+}
