@@ -9,6 +9,8 @@
       "@shared/*": ["src/app/shared/*"],
       "@core/*": ["src/app/core/*"],
       "@store/*": ["src/app/core/store/*"],
+      "@domain/*": ["src/app/domain/*"],
+      "@infra/*": ["src/app/infrastructure/*"],
       "@pages/*": ["src/app/ui/pages/*"],
       "@atoms/*": ["src/app/ui/components/atoms/*"],
       "@molecules/*": ["src/app/ui/components/molecules/*"],

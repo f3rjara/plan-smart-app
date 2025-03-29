@@ -3,10 +3,28 @@
     <div class="col-10">
       <div class="flex flex-column gap-2">
         <label for="username">Nombre de usuario</label>
-        <input pInputText id="username" aria-describedby="username-help" formControlName="username" />
+        <input
+          pInputText
+          id="username"
+          aria-describedby="username-help"
+          formControlName="username"
+          [value]="username?.value | titlecase" />
         @if (username?.invalid && username?.touched) {
           <small class="text-red-400 text-xs" id="username-help">
-            Ingresa un nombre válido, solo letras y espacios
+            @switch (true) {
+              @case (username?.hasError('required')) {
+                El nombre es obligatorio.
+              }
+              @case (username?.hasError('pattern')) {
+                Ingresa un nombre válido, solo letras y espacios.
+              }
+              @case (username?.hasError('minlength')) {
+                El nombre debe tener al menos 3 caracteres.
+              }
+              @case (username?.hasError('maxlength')) {
+                El nombre no puede tener más de 50 caracteres.
+              }
+            }
           </small>
         }
       </div>
@@ -24,7 +42,7 @@
           class="inputmask-comp" />
         @if (phoneNumber?.invalid && phoneNumber?.touched) {
           <small class="text-red-400 text-xs" id="phoneNumber-help">
-            Ingresa un número válido para Colombia (+57)
+            Ingresa un número válido para Colombia (+57).
           </small>
         }
       </div>
@@ -32,7 +50,13 @@
   </div>
   <div class="grid justify-content-center my-2">
     <div class="col-10 text-center">
-      <p-button label="Inicar" severity="contrast" type="submit" [disabled]="signInForm.invalid" [fluid]="true" />
+      <p-button
+        [label]="isLoading() ? 'Validando' : 'Iniciar'"
+        [loading]="isLoading()"
+        severity="contrast"
+        type="submit"
+        [disabled]="signInForm.invalid"
+        [fluid]="true" />
     </div>
   </div>
 </form>
