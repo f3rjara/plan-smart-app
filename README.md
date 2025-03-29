@@ -1,16 +1,4 @@
-<h1 align="center">Arquetipo Angular Pragma</h1>
-<div>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/fernando-jaramillo-pragma/fernando-jaramillo-pragma/blob/cea4d0f148a7a46b43ab1bf84c7f4e456a166e09/tecnologias/pragma_solido_ok.png?raw=true">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/fernando-jaramillo-pragma/fernando-jaramillo-pragma/cea4d0f148a7a46b43ab1bf84c7f4e456a166e09/tecnologias/pragma_blanco_ok.png">
-    <img alt="Logo Pragma" src="https://raw.githubusercontent.com/fernando-jaramillo-pragma/fernando-jaramillo-pragma/cea4d0f148a7a46b43ab1bf84c7f4e456a166e09/tecnologias/pragma_blanco_ok.png" width="250px" height="50px">
-  </picture>
-</div>
-
 <h2 align="center">Angular | La plataforma moderna para el desarrollo web.</h2>
-
-
-
 
 <p align="center">
   <img src="https://img.shields.io/badge/Angular-v15-red?logo=angular" />
@@ -47,7 +35,7 @@
 
 Este proyecto ha sido genereado con [Angular CLI](https://github.com/angular/angular-cli) versión 18
 
-Este proyecto trabaja bajo Angular v18 mediante STANDALONE,puede revisar las TAGs o Ramas del respositorio actual para ver las versiones disponibles.
+Este proyecto trabaja bajo Angular v18 mediante STANDALONE
 
 
 #### Requerimientos y dependencias
@@ -57,15 +45,6 @@ Este proyecto trabaja bajo Angular v18 mediante STANDALONE,puede revisar las TAG
 |  Angular CLI  |  18.2     |
 |  Node         |  20.1     |
 |  Npm          |  10.8     |
-
-
-## Clonando el Repositorio
-
-Puede realizar el clonado segun la version y rama respectiva, si no desea conservar historial de commits sugerimos:
-
-```bash 
-git clone --depth=1 --branch <nombre-rama> <URL_DEL_REPO>
-``` 
 
 
 ## Servidor de Desarrollo
@@ -172,12 +151,8 @@ Además, puede encontrar información adicional en nuestro espacio de trabajo:  
 
 Para obtener más ayuda sobre Angular CLI, use `ng help` o consulte la página [Angular CLI Overview and Command Reference](https://angular.io/cli).
 
-Puede consultar la WIKI del arquetipo. [Arquetipo Pragma WIKi](https://gitlab.com/pragma-arquetipos-front/arquetipo-angular-pragma/-/wikis/home)
 
 ## Expressions of Gratitude 🎁
 
-<b>"El talento no solo hay que encontrarlo, hay que guiarlo en la dirección correcta."</b> Pragma
+<b>"El talento no solo hay que encontrarlo, hay que guiarlo en la dirección correcta."</b>
 
-## Author 🤖
-
-PRAGMA 💜
